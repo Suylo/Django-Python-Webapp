@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'applipizza/css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static 'applipizza/img/favicon.png' %}" type="image/x-icon">
+</head>
+<body>
+<section class="wrapper">
+    <header>
+        <img src="{% static 'applipizza/img/favicon.png' %}" alt="Logo">
+        <h1><span class="red">A</span>ppli Pizza<span class="red">™</span></h1>
+        <hr>
+        <nav>
+            <div><a href="/pizzas/">Les pizzas</a></div>
+            <div><a href="/ingredients">Les ingrédients</a></div>
+        </nav>
+    </header>
+    <section class="wrapper_content">
+        <main>
+            <section class="title">
+                <h2>{% block title_page %}{% endblock %}</h2>
+            </section>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            Appli pizza 2023
+        </footer>
+    </section>
+</section>
+</body>
+</html>

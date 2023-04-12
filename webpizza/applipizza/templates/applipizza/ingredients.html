@@ -1,0 +1,20 @@
+{% extends 'applipizza/base.html' %}
+
+{% block title %}
+Les ingrédients
+{% endblock %}
+
+{% block title_page %}
+Les ingrédients
+        <a href="/ingredients/add" class="link_to">Ajouter +</a>
+{% endblock %}
+
+{% block content %}
+<h2>Voici nos {{ ingredients|length }} ingrédients</h2>
+
+<ul>
+    {% for ing in ingredients %}
+    <li>{{ ing }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

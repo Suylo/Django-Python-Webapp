@@ -1,0 +1,115 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: whitesmoke;
+}
+
+header{
+    min-width: 300px;
+    background-color: #267232;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 25px 25px 0;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+    padding-top: 2rem;
+}
+header h1 {
+    font-family: "Arial Black", sans-serif;
+    font-size: 1.9rem;
+}
+header img{
+    max-width: 135px;
+}
+header hr{
+    width: 20%;
+    border: 2px solid #a6281b;
+    margin: 1.4rem auto;
+}
+.red{
+    color: #ff9428;
+}
+
+.wrapper{
+    display: flex;
+    height: 100vh;
+}
+
+.wrapper_content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3.4rem 1rem;
+}
+
+footer{
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+    color: #a6281b;
+    text-transform: uppercase;
+
+    font-family: "Arial Rounded MT Bold", sans-serif;
+}
+footer:after{
+    content: " ©";
+    margin-left: .5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav > div{
+    padding: 0;
+}
+nav > div > a{
+    color: #fff;
+    display: block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size: 1.3rem;
+    transition: all .3s ease-in-out;
+    border-radius: 15px 0 0 15px;
+    margin-left: 1rem;
+}
+nav > div > a:hover{
+    background-color: #ff9428;
+}
+.title{
+    background-color: white;
+    box-shadow: 3px 3px 0 #267232;
+    padding: 0.1rem 1rem;
+    color: #a6281b;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size: 1.3rem;
+    border-radius: 15px;
+}
+
+.link_to{
+    background-color: #a6281b;
+    color: white;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    padding: 0.3rem 1rem;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+    border: 1px solid transparent;
+}
+.link_to:hover{
+    border: 1px solid #a6281b;
+    background-color: white;
+    color: #a6281b;
+}
+.black{
+    color: black;
+}

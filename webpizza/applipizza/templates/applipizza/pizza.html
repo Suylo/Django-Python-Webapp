@@ -1,0 +1,24 @@
+{% extends 'applipizza/base.html' %}
+
+
+{% block title %}
+    Pizza
+{% endblock %}
+
+{% block title_page %}
+    Détails Pizza : <span class="black">{{ pizza.nomPizza }}</span>
+{% endblock %}
+
+{% block content %}
+    <h2>{{ pizza.nomPizza }}</h2>
+    <p>Prix : {{ pizza.prixPizza }}€</p>
+    {% if ingredients|length > 0 %}
+        <h3>Les ingrédients : </h3>
+        <ul>
+            {% for ing in ingredients %}
+                <li>{{ ing.0 }} : {{ ing.1 }}</li>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+{% endblock %}
