@@ -10,7 +10,7 @@ class Ingredient(models.Model):
 
     # une méthode de type toString
     def __str__(self) -> str:
-        return 'ingrédient : ' + self.nomIngredient
+        return self.nomIngredient
 
 
 class Pizza(models.Model):

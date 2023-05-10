@@ -1,0 +1,17 @@
+{% extends 'applipizza/base.html' %}
+
+{% block title %}
+    Création d'une nouvelle pizza !
+{% endblock %}
+
+{% block title_page %}
+    Création d'une nouvelle pizza !
+{% endblock %}
+
+{% block content %}
+    <h2>Bonne nouvelle ! Votre Pizza a bien été créé :</h2>
+    <ul>
+        <li>Nom : {{  nom}}</li>
+        <li>Prix : {{ prix }}</li>
+    </ul>
+{% endblock %}

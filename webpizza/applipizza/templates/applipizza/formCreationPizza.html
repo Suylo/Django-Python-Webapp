@@ -3,12 +3,12 @@
 {% block title %}Pizza{% endblock %}
 
 {% block title_page %}
-    Ajout d'un ingrédient
+    Création d'une nouvelle Pizza
 {% endblock %}
 
 {% block content %}
-    <h2>Formulaire d'ajout d'ingrédients</h2>
-    <form action="/ingredients/create/" method="POST">
+    <h2>Formulaire d'ajout d'une Pizza</h2>
+    <form action="/pizzas/create/" method="POST">
     {% csrf_token %}
     {{ form.as_div }}
         <input type="submit" value="Soumettre" class="link_to">

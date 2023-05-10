@@ -19,6 +19,14 @@
                 <li>{{ ing.0 }} : {{ ing.1 }}</li>
             {% endfor %}
         </ul>
-
+    {% else %}
+        <h3>Cette pizza n'a aucun ingrédients !</h3>
     {% endif %}
+    <hr>
+    <h3>Ajout d'un nouvel ingrédient</h3>
+    <form action="/pizzas/{{ pizza.idPizza }}/addIngredient/" method="post" class="form__ing">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <input type="submit" value="Envoyer" class="link_to_add">
+    </form>
 {% endblock %}

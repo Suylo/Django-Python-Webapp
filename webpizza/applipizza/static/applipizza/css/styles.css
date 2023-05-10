@@ -113,3 +113,55 @@ nav > div > a:hover{
 .black{
     color: black;
 }
+
+.logo{
+    animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.link_to_add{
+    background-color: #ff9428;
+    color: white;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    padding: 0.3rem 1rem;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    border: 1px solid transparent;
+}
+.link_to_add:hover{
+    border: 1px solid #ff9428;
+    background-color: white;
+    color: #ff9428;
+}
+
+.form__ing{
+    display: flex;
+    flex-direction: column;
+}
+.form__ing input, .form__ing select{
+    margin: 15px 0;
+}
+
+input, select{
+    border-radius: 5px;
+    padding: 1rem;
+    font-family: "Verdana", sans-serif;
+    font-size: 16px;
+    border: none;
+    margin: 10px;
+    width: 100%;
+    display: block;
+    background-color: #dfdfdf;
+    box-sizing: border-box;
+}
