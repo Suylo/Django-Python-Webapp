@@ -14,9 +14,12 @@
     <p>Prix : {{ pizza.prixPizza }}€</p>
     {% if ingredients|length > 0 %}
         <h3>Les ingrédients : </h3>
-        <ul>
+        <ul class="ul_ingr">
             {% for ing in ingredients %}
-                <li>{{ ing.0 }} : {{ ing.1 }}</li>
+                <li class="disp_ingredients">
+                    {{ ing.nom }} : {{ ing.qte }}
+                    <a href="/pizzas/{{pizza.idPizza}}/deleteIngredient/{{ing.id}}" class="link_to_delete">✖</a>
+                </li>
             {% endfor %}
         </ul>
     {% else %}

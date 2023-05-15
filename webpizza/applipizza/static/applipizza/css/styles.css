@@ -42,6 +42,7 @@ header hr{
     display: flex;
     flex-direction: column;
     padding: 1rem 3.4rem 1rem;
+    overflow-y: auto;
 }
 
 footer{
@@ -145,6 +146,43 @@ nav > div > a:hover{
     color: #ff9428;
 }
 
+.link_to_delete{
+    background-color: #c50100;
+    color: white;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    padding: 0.1rem 1rem;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+    border: 1px solid transparent;
+    margin: 5px;
+}
+.link_to_delete:hover{
+    border: 1px solid #c50100;
+    background-color: white;
+    color: #c50100;
+}
+.link_to_edit{
+    background-color: #267232;
+    color: white;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    padding: 0.1rem 1rem;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+    border: 1px solid transparent;
+    margin: 5px;
+}
+.link_to_edit:hover{
+    border: 1px solid #267232;
+    background-color: white;
+    color: #267232;
+}
+
 .form__ing{
     display: flex;
     flex-direction: column;
@@ -164,4 +202,28 @@ input, select{
     display: block;
     background-color: #dfdfdf;
     box-sizing: border-box;
+}
+.ul_ingr{
+    padding-left: 0;
+}
+
+.disp_ingredients{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 1.7rem;
+}
+
+.disp_ingredients::before{
+    content: "•";
+    position: absolute;
+    color: #ff9428;
+    left: 0;
+    padding-left: .4rem;
+    font-size: 2rem;
+}
+.disp_ingredients:hover{
+    background-color: #dedede;
+    border-radius: 2px;
 }

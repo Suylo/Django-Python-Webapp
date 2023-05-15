@@ -1,0 +1,16 @@
+{% extends 'applipizza/base.html' %}
+
+{% block title %}Ingrédient{% endblock %}
+
+{% block title_page %}
+    Modif d'un ingrédient
+{% endblock %}
+
+{% block content %}
+    <h2>Formulaire d'ajout d'ingrédients</h2>
+    <form action="/ingredients/{{ ingredient.idIngredient }}/updated/" method="POST">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <input type="submit" value="Soumettre" class="link_to">
+    </form>
+{% endblock %}

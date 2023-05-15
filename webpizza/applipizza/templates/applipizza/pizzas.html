@@ -11,11 +11,15 @@ Liste de nos pizzas
 
 {% block content %}
     <h2>Voici nos {{ pizzas|length }} pizzas</h2>
-    <ul>
+    <ul class="ul_ingr">
         {% for piz in pizzas %}
-        <li>
+        <li class="disp_ingredients">
             {{ piz }}
-            <a href="/pizzas/{{ piz.idPizza }}" class="link_to">Détails</a>
+            <div>
+                <a href="/pizzas/{{ piz.idPizza }}" class="link_to">Détails</a>
+                <a href="/pizzas/{{ piz.idPizza }}/update" class="link_to_edit">✏</a>
+                <a href="/pizzas/{{ piz.idPizza }}/delete" class="link_to_delete">✖</a>
+            </div>
         </li>
         {% endfor %}
     </ul>

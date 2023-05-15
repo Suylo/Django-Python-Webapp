@@ -12,9 +12,15 @@ Les ingrédients
 {% block content %}
 <h2>Voici nos {{ ingredients|length }} ingrédients</h2>
 
-<ul>
+<ul class="ul_ingr">
     {% for ing in ingredients %}
-    <li>{{ ing }}</li>
+    <li class="disp_ingredients">
+        {{ ing }}
+        <div>
+            <a href="/ingredients/{{ ing.idIngredient }}/update" class="link_to_edit">✏</a>
+            <a href="/ingredients/{{ ing.idIngredient }}/delete" class="link_to_delete">✖</a>
+        </div>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}

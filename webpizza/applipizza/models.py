@@ -23,7 +23,7 @@ class Pizza(models.Model):
 
     # toString
     def __str__(self) -> str:
-        return  self.nomPizza + (' | (Prix= ' + str(self.prixPizza) + '€')
+        return  self.nomPizza + (' | Prix: ' + str(self.prixPizza) + '€')
 
 class Composition(models.Model):
     class Meta :

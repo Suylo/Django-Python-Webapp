@@ -1,0 +1,16 @@
+{% extends 'applipizza/base.html' %}
+
+{% block title %}Pizza{% endblock %}
+
+{% block title_page %}
+    Modification Pizza : {{ pizza.idPizza }}
+{% endblock %}
+
+{% block content %}
+    <h2>Formulaire de modification d'une Pizza</h2>
+    <form action="/pizzas/{{ pizza.idPizza }}/updated/" method="POST">
+    {% csrf_token %}
+    {{ form.as_div }}
+        <input type="submit" value="Soumettre" class="link_to">
+    </form>
+{% endblock %}
