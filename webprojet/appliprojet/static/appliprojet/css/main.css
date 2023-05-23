@@ -1,0 +1,83 @@
+html, body {
+  background-color: whitesmoke;
+  padding: 0;
+  margin: 0;
+  font-family: "Verdana", sans-serif;
+}
+
+.app__header {
+  background-color: #9468de;
+  color: white;
+  padding: 10px 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  padding: 2rem;
+  background-color: white;
+  margin: 0;
+  color: #9468de;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.app__nav {
+  background-color: #413161;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+.app__nav ul {
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+}
+.app__nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1.5rem 3rem;
+  font-weight: 600;
+  position: relative;
+}
+.app__nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 0;
+  background-color: #9468de;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.app__nav ul li a:hover::after {
+  height: 100%;
+}
+.app__grid {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+.app__grid li {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e4e4;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=main.css.map */

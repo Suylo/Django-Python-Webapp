@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'appliprojet/css/main.css' %}">
+    <title>{% block titre %}{% endblock %}</title>
+</head>
+<body>
+<header class="app__header">
+    <h1 class="app__logo">BuyAGame</h1>
+</header>
+<nav class="app__nav">
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Liste</a></li>
+        <li><a href="#">Ajout</a></li>
+    </ul>
+</nav>
+<main>
+    {% block contenu %}{% endblock %}
+</main>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'appliprojet/layout.html' %}
+{% block contenu %}
+    <ul class="app__grid">
+        {% for jeu in jeux %}
+            <li>
+                {{ jeu }}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
