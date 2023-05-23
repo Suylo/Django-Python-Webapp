@@ -1,0 +1,35 @@
+{% extends 'connexion/base.html' %}
+{% block titre %}Connexion{% endblock%}
+{% block contenu %}
+<div>
+    <form id="form_login" method="post">
+        {% csrf_token %}
+        {% if form.non_fields_errors %}
+            {% for error in form.non_fields_errors %}
+                <p class="alert">{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+        <table>
+            {% for field in form %}
+                <tr>
+                    <td>{{ field.label_tag }}</td>
+                    <td>{{ field }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button type="submit">Se connecter</button>
+    </form>
+</div>
+<div>
+    <small>Pas encore inscrit ?
+    <a href="">
+        S'inscrire
+    </a>
+    <br>
+    Mot de passe oublié ?
+    <a href="">
+        Renouveler mon mdp
+    </a>
+    </small>
+</div>
+{% endblock %}
