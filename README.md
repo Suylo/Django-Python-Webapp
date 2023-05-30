@@ -9,8 +9,8 @@
 
 Python c'est chiant et bad long pitié n'en faites jamais :( 
 
-```shell
-py -m venv env
+```bash
+python -m venv env
 ```
 
 ### Windows
