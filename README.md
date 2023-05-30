@@ -9,21 +9,31 @@
 
 Python c'est chiant et bad long pitié n'en faites jamais :( 
 
-```py -m venv env```
+```shell
+py -m venv env
+```
 
 ### Windows
-```.\env\Scripts\activate```
+```bash
+.\env\Scripts\activate
+```
 
 ### Linux
-```source env/bin/activate```
+```bash
+source env/bin/activate
+```
 <hr>
 
 Une fois dans (env)
-```pip install django```
+```bash
+pip install django
+```
 
 Une fois Django installé, il reste plus qu'à éxecuter le serveur :
 
-```py .\webpizza\manage.py runserver```
+```bash
+py .\webpizza\manage.py runserver
+```
 
 
 ## Images de l'appli "Pizza" 
