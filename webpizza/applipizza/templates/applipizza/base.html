@@ -14,9 +14,9 @@
         <h1><span class="red">A</span>ppli Pizza<span class="red">™</span></h1>
         <hr>
         <nav>
-            {% if user.is_authenticated %}
                 <div><a href="/pizzas/">Les pizzas</a></div>
                 <div><a href="/ingredients">Les ingrédients</a></div>
+            {% if user.is_authenticated %}
                 <div id="logout" style="margin-top: 4rem;text-align: center;background-color:#a6281b;">
                     Bienvenue {{ user }} !
                     <a href="{% url 'logout' %}">Déconnexion</a>

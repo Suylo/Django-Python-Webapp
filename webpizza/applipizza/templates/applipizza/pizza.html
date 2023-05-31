@@ -18,13 +18,16 @@
             {% for ing in ingredients %}
                 <li class="disp_ingredients">
                     {{ ing.nom }} : {{ ing.qte }}
+                    {% if user.is_authenticated %}
                     <a href="/pizzas/{{pizza.idPizza}}/deleteIngredient/{{ing.id}}" class="link_to_delete">✖</a>
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>
     {% else %}
         <h3>Cette pizza n'a aucun ingrédients !</h3>
     {% endif %}
+    {% if user.is_authenticated %}
     <hr>
     <h3>Ajout d'un nouvel ingrédient</h3>
     <form action="/pizzas/{{ pizza.idPizza }}/addIngredient/" method="post" class="form__ing">
@@ -32,4 +35,5 @@
         {{ form.as_div }}
         <input type="submit" value="Envoyer" class="link_to_add">
     </form>
+    {% endif %}
 {% endblock %}

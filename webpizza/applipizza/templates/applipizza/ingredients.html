@@ -6,7 +6,9 @@ Les ingrédients
 
 {% block title_page %}
 Les ingrédients
-        <a href="/ingredients/add" class="link_to_add">Ajouter +</a>
+    {% if user.is_authenticated %}
+    <a href="/ingredients/add" class="link_to_add">Ajouter +</a>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -16,10 +18,12 @@ Les ingrédients
     {% for ing in ingredients %}
     <li class="disp_ingredients">
         {{ ing }}
+        {% if user.is_authenticated %}
         <div>
             <a href="/ingredients/{{ ing.idIngredient }}/update" class="link_to_edit">✏</a>
             <a href="/ingredients/{{ ing.idIngredient }}/delete" class="link_to_delete">✖</a>
         </div>
+        {% endif %}
     </li>
     {% endfor %}
 </ul>

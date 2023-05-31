@@ -36,7 +36,7 @@ class Composition(models.Model):
 
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE, verbose_name="Pizza de la composition")
 
-    quantite = models.IntegerField(verbose_name="Quantité de l'ingrédient dans la pizza")
+    quantite = models.CharField(verbose_name="Quantité de l'ingrédient dans la pizza", max_length=255)
 
     # toString
     def __str__(self) -> str:

@@ -6,7 +6,10 @@ Les pizzas
 
 {% block title_page %}
 Liste de nos pizzas
+    {% if user.is_authenticated %}
+
     <a href="/pizzas/add" class="link_to_add">Ajouter +</a>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -17,8 +20,10 @@ Liste de nos pizzas
             {{ piz }}
             <div>
                 <a href="/pizzas/{{ piz.idPizza }}" class="link_to">Détails</a>
+                {% if user.is_authenticated %}
                 <a href="/pizzas/{{ piz.idPizza }}/update" class="link_to_edit">✏</a>
                 <a href="/pizzas/{{ piz.idPizza }}/delete" class="link_to_delete">✖</a>
+                {% endif %}
             </div>
         </li>
         {% endfor %}
