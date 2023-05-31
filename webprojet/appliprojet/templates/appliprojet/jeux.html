@@ -3,7 +3,13 @@
     <ul class="app__grid">
         {% for jeu in jeux %}
             <li>
-                {{ jeu }}
+                    <img src="{{ jeu.img_url }}" alt="{{ jeu.label }}">
+                    <p>
+                        {{ jeu }}
+                        <span>
+                        {{ jeu.prix }} €
+                    </span>
+                    </p>
             </li>
         {% endfor %}
     </ul>

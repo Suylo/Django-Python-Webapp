@@ -74,15 +74,59 @@ html, body {
     margin: 1rem;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     li{
       height: 250px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
+      text-decoration: none;
       background-color: #e6e4e4;
       border-radius: 5px;
+      position: relative;
+      transition: all .2s ease-in-out;
+      &:hover{
+        animation: shake 0.6s infinite;
+      }
+      img{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2 ;
+        height: 100%;
+        left: 0;
+        border-radius: 4px;
+      }
+      p{
+        width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(67, 38, 128, 0.7);
+        padding: 1rem 2rem;
+        z-index: 2;
+        margin-bottom: 0;
+        border-radius: 4px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        span{
+            font-size: 1rem;
+            color: white;
+            background-color: rgb(217, 137, 41);
+            padding: 0.5rem 1rem;
+          font-family: sans-serif;
+            z-index: 2;
+            margin-bottom: 0;
+            border-radius: 4px;
+            position: relative;
+          font-weight: bold;
+          margin-left: 1rem;
+        }
+      }
     }
   }
 }
+
+// animations translate 30% scale 1.1 rotate 34deg  skew 3d 3deg
+
