@@ -6,21 +6,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'connexion/main.css' %}">
     <title>{% block titre %}{% endblock %}</title>
 </head>
 <body>
 <header>
 
 </header>
-<main>
-    {% block contenu %}{% endblock %}
-    <div id="div_image_accueil">
-        <img src="{% static 'applipizza/img/favicon.png' %}" alt="Logo" id="image_accueil">
-    </div>
-</main>
-<footer>
-    Appli pizza 2023
-</footer>
-
+    <main class="login__wrapper">
+        <div id="div_image_accueil">
+            <img src="{% static 'applipizza/img/favicon.png' %}" alt="Logo" id="image_accueil">
+        </div>
+        {% block contenu %}{% endblock %}
+    </main>
 </body>
 </html>
