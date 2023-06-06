@@ -19,8 +19,8 @@ class Selection(models.Model):
 
 class Jeux(models.Model):
     id_jeux = models.AutoField(primary_key=True)
-    label = models.CharField(max_length=50, verbose_name='Nom du jeu')
-    img_url = models.CharField(max_length=255, verbose_name='Url image')
+    label = models.CharField(max_length=255, verbose_name='Nom du jeu')
+    img_url = models.ImageField(verbose_name='Url image', upload_to='images/', max_length=255)
     prix = models.FloatField(verbose_name='Prix du jeu')
     selection = models.ForeignKey(Selection, on_delete=models.CASCADE)
 

@@ -1,12 +1,12 @@
 {% extends 'appliprojet/layout.html' %}
 {% block contenu %}
 <h2 class="title__section">
-    Les jeux
+    Les jeux de la catégorie {{ categories.label }}
 </h2>
-<ul class="app__grid">
-    {% for jeu in jeux %}
+<ul class="app__grid ">
+    {% for jeu in categories.jeux %}
     <a href="/jeux/{{ jeu.id_jeux }}">
-        <img src="{{ jeu.img_url }}" alt="{{ jeu.label }}">
+     <img src="{{ jeu.img_url }}" alt="{{ jeu.label }}">
         <p>
             {{ jeu }}
             <span>{{ jeu.prix }} €</span>

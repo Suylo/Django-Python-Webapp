@@ -1,5 +1,5 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,21 +8,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'appliprojet/css/main.css' %}">
     <title>{% block titre %}{% endblock %}</title>
+    {% block css %}{% endblock %}
 </head>
 <body>
 <header class="app__header">
-    <h1 class="app__logo">Micro Maniarque</h1>
+    <h1 class="app__logo">MicroMarnaque</h1>
 </header>
 <nav class="app__nav">
     <ul>
         <li><a href="/">Accueil</a></li>
         <li><a href="/jeux">Jeux</a></li>
         <li><a href="/categories">Catégories</a></li>
-        <li><a href="/"></a></li>
     </ul>
+    {% if user.is_authenticated %}
+        <div class="app__navlogo__title">
+            <span>Bonjour</span>
+            <h2 class="app__navlogo">{{ user }}</h2>
+            <a href="{% url 'logout' %}">Déconnexion</a>
+        </div>
+    {% else %}
+    <div class="app__navlogo__title">
+        <h2 class="app__navlogo">MicroMarnaque</h2>
+        <a href="{% url 'login' %}">Connexion</a>
+    </div>
+    {% endif %}
 </nav>
 <main>
     {% block contenu %}{% endblock %}
 </main>
+
+{% block js %}{% endblock %}
 </body>
 </html>

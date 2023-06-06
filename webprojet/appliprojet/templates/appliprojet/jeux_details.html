@@ -1,0 +1,15 @@
+{% extends 'appliprojet/layout.html' %}
+{% block contenu %}
+<h2 class="title__section">
+    {{ jeux }}
+</h2>
+<div class="app__grid">
+    <img src="{{ jeux.img_url }}" alt="{{ jeux.label }}">
+    <p>
+        {{ jeux }}
+    </p>
+    <p>
+        {{ jeux.prix }} €
+    </p>
+</div>
+{% endblock %}

@@ -1,14 +1,24 @@
 {% extends 'appliprojet/layout.html' %}
 {% block contenu %}
+<h2 class="title__section">
+    Les catégories
+</h2>
     <ul class="app__grid app__grid__categ">
         {% for categ in categories %}
             <li>
-                    <p>
-                        {{ categ }}
-                        <span>
-                            Découvrir les 5 jeux
+                <a href="/categories/{{ categ.id_categorie}}/jeux" {% if categ.jeux|length == 0 %} class="rupture"
+                   {%endif%}>
+                    {{ categ }}
+                    {% if categ.jeux|length == 0 %}
+                        <span class="rupture">
+                            RUPTURE DE STOCK
                         </span>
-                    </p>
+                    {% else %}
+                        <span>
+                            Découvrir les {{ categ.jeux|length }} jeux
+                        </span>
+                    {% endif %}
+                </a>
             </li>
         {% endfor %}
     </ul>

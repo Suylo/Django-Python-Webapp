@@ -1,0 +1,50 @@
+{% extends 'appliprojet/layout.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+{% endblock %}
+
+{% block contenu %}
+<h2 class="title__section">
+    Quelques catégories ...
+</h2>
+<ul class="app__grid app__grid__categ app__grid__all">
+  {% for categ in categories %}
+  {% if categ.jeux|length > 0 %}
+    <li>
+      <a href="/categories/{{ categ.id_categorie}}/jeux" >
+        {{ categ }}
+        <span>Découvrir les {{ categ.jeux|length }} jeux</span>
+      </a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+<h2 class="title__section">
+  Jeux disponibles
+</h2>
+<div class="swiper-container">
+<ul class="app__grid__slider swiper-wrapper">
+  {% for jeu in jeux %}
+  <a href="/jeux/{{ jeu.id_jeux }}" class="swiper-slide">
+      <img src="{{ jeu.img_url }}" alt="{{ jeu.label }}">
+      <p>
+        {{ jeu }}
+        <span>{{ jeu.prix }} €</span>
+      </p>
+  </a>
+  {% endfor %}
+</ul>
+</div>
+{% endblock %}
+
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 4,
+    spaceBetween: 15,
+  });
+</script>
+{% endblock %}

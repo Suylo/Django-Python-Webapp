@@ -1,0 +1,9 @@
+{% extends 'connexion/base.html' %}
+{% block titre %}Déconnexion{% endblock%}
+{% block contenu %}
+    <h2>Vous êtes bien déconnecté</h2>
+    <p>
+    A bientôt chez Micro M'arnaque !
+    </p>
+    <a href="{% url 'login' %}" class="btn">Se connecter</a>
+{% endblock %}

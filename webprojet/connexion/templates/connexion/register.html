@@ -1,0 +1,35 @@
+{% extends 'connexion/base.html' %}
+
+{% block titre %}
+Inscription
+{% endblock %}
+
+{% block contenu %}
+<form id="form_register" method="post">
+    {% csrf_token %}
+    <table>
+        {% for field in form %}
+        <tr>
+            <td>{{ field.label_tag }}</td>
+            <td>{{ field }}</td>
+        </tr>
+        {% for error in field.errors %}
+        <tr>
+            <td></td>
+            <td class="alert alert-danger">{{ error }}</td>
+        </tr>
+        {% endfor %}
+        {% endfor %}
+    </table>
+    <input type="submit" value="S'inscrire">
+</form>
+<div>
+    <small>
+        Déja inscrit ?
+        <a href="{% url 'login' %}" class="btn">
+            Se connecter
+        </a>
+    </small>
+</div>
+
+{% endblock %}
