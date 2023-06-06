@@ -1,0 +1,17 @@
+{% extends 'appliprojet/layout.html' %}
+{% block contenu %}
+    <ul class="app__grid app__grid__categ">
+        {% for categ in categories %}
+            <li>
+                    <p>
+                        {{ categ }}
+                        <span>
+                            Découvrir les 5 jeux
+                        </span>
+                    </p>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

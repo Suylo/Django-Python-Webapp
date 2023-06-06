@@ -21,4 +21,6 @@ from appliprojet import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('jeux/', views.jeux),
+    path('categories/', views.categories),
+    path('', views.jeux)
 ]
