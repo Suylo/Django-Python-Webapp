@@ -26,5 +26,7 @@ urlpatterns = [
     path('categories/<int:id_categorie>/jeux', views.categories_jeux),
     path('', views.all),
     path('', include('connexion.urls')),
-
+    path('panier/', views.panier, name='panier'),
+    path('ajouter-au-panier/<int:jeux_id>/', views.ajouter_au_panier, name='ajouter_au_panier'),
+    path('supprimer-du-panier/<int:ligne_panier_id>/', views.supprimer_du_panier, name='supprimer_du_panier'),
 ]

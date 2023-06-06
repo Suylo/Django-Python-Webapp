@@ -245,4 +245,38 @@ main {
   overflow-x: hidden !important;
 }
 
+.panier {
+  background-color: #c50100 !important;
+  display: block;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  margin-left: 2rem;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.panier:hover {
+  background-color: #a40000 !important;
+}
+
+.app__panier .ligne_panier {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+.app__panier .ligne_panier img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.app__panier .ligne_panier p {
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: unset;
+  color: black;
+}
+
 /*# sourceMappingURL=main.css.map */

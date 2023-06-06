@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Categorie(models.Model):
@@ -34,3 +35,18 @@ class Posseder(models.Model):
 
     def __str__(self):
         return f"Jeux: {self.jeux.label} | Categorie: {self.categorie.nom}"
+
+class Panier(models.Model):
+    utilisateur = models.ForeignKey(User, on_delete=models.CASCADE)
+    jeux = models.ManyToManyField('Jeux', through='LignePanier')
+
+    def __str__(self):
+        return f"Panier de {self.utilisateur.username}"
+
+class LignePanier(models.Model):
+    panier = models.ForeignKey(Panier, on_delete=models.CASCADE)
+    jeux = models.ForeignKey(Jeux, on_delete=models.CASCADE)
+    quantite = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.jeux.label} ({self.quantite})"

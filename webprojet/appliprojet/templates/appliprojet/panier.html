@@ -1,0 +1,24 @@
+{% extends 'appliprojet/layout.html' %}
+
+{% block contenu %}
+<h2 class="title__section">
+  Mon panier - Total : {{ montant_total }} €
+</h2>
+
+<ul class="app__panier app__grid">
+  {% for ligne_panier in lignes_panier %}
+  <li class="ligne_panier">
+    <img src="{{ ligne_panier.jeux.img_url }}" alt="{{ ligne_panier.jeux.label }}">
+    <p>{{ ligne_panier.jeux.label }}</p>
+    <p>{{ ligne_panier.jeux.prix }} €</p>
+    <p>Quantité : {{ ligne_panier.quantite }}</p>
+    <a href="/supprimer-du-panier/{{ ligne_panier.id }}/" class="panier">
+      Supprimer
+    </a>
+  </li>
+  {% empty %}
+  <p>Votre panier est vide.</p>
+  {% endfor %}
+</ul>
+
+{% endblock %}

@@ -260,3 +260,43 @@ html, body {
 main{
   overflow-y:auto; overflow-x:hidden !important;
 }
+
+.panier{
+  background-color: #c50100 !important;
+  display: block;
+  padding: .25rem 1rem;
+  border-radius: 5px;
+  margin-left: 2rem;
+  color: white;
+  text-decoration : none;
+  font-family: sans-serif;
+  &:hover{
+    background-color: #a40000 !important;
+  }
+}
+
+.app{
+  &__panier{
+
+    .ligne_panier{
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      img{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      p {
+        position   : relative;
+        padding    : 0;
+        box-sizing : border-box;
+        margin     : 0;
+        background-color : unset;
+        color: black;
+      }
+
+    }
+  }
+}
