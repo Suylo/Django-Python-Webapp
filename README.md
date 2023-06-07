@@ -32,7 +32,7 @@ pip install django
 Une fois Django installé, il reste plus qu'à éxecuter le serveur :
 
 ```bash
-py .\webpizza\manage.py runserver
+python .\webpizza\manage.py runserver
 ```
 
 

@@ -8,7 +8,7 @@
 <ul class="app__panier app__grid">
   {% for ligne_panier in lignes_panier %}
   <li class="ligne_panier">
-    <img src="{{ ligne_panier.jeux.img_url }}" alt="{{ ligne_panier.jeux.label }}">
+    <img src="{{ ligne_panier.jeux.img_url.url }}" alt="{{ ligne_panier.jeux.label }}">
     <p>{{ ligne_panier.jeux.label }}</p>
     <p>{{ ligne_panier.jeux.prix }} €</p>
     <p>Quantité : {{ ligne_panier.quantite }}</p>

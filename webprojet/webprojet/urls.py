@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from appliprojet import views
 from django.urls import path, include
+from django.conf.urls.static import static
+from webprojet import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,3 +32,5 @@ urlpatterns = [
     path('ajouter-au-panier/<int:jeux_id>/', views.ajouter_au_panier, name='ajouter_au_panier'),
     path('supprimer-du-panier/<int:ligne_panier_id>/', views.supprimer_du_panier, name='supprimer_du_panier'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

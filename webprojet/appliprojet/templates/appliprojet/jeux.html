@@ -7,11 +7,12 @@
     {% for jeu in jeux %}
     <li>
         <a href="/jeux/{{ jeu.id_jeux }}">
-            <img src="{{ jeu.img_url }}" alt="{{ jeu.label }}">
+            <img src="{{ jeu.img_url.url }}" alt="{{ jeu.label }}">
         </a>
         <p>
             {{ jeu }}
             <span>{{ jeu.prix }} €</span>
+
             <a class="panier" href="/ajouter-au-panier/{{ jeu.id_jeux }}/">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1155_8174)">

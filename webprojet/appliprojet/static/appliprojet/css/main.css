@@ -147,7 +147,7 @@ html, body {
 .app__grid li p span, .app__grid > a p span, .app__grid__slider li p span, .app__grid__slider > a p span {
   font-size: 1rem;
   color: white;
-  background-color: rgb(217, 137, 41);
+  background-color: #d98929;
   padding: 0.5rem 1rem;
   font-family: sans-serif;
   z-index: 2;
@@ -177,7 +177,7 @@ html, body {
   transform: translateY(0);
 }
 .app__grid__categ li:nth-child(2n+1) p, .app__grid__slider__categ li:nth-child(2n+1) p {
-  background-color: rgb(4, 94, 185);
+  background-color: #045eb9;
 }
 .app__grid__categ li a, .app__grid__slider__categ li a {
   width: 100%;
@@ -205,7 +205,7 @@ html, body {
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
   color: white;
-  background-color: rgb(217, 137, 41);
+  background-color: #d98929;
   padding: 0.5rem 1rem;
   font-family: sans-serif;
   margin-top: 1rem;
